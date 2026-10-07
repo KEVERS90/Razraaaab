@@ -29,7 +29,7 @@
             --line: rgba(255,220,225,0.08);
             --line-2: rgba(255,220,225,0.14);
             --pad: clamp(20px, 4vw, 48px);
-            --maxw: 1200px;
+            --maxw: 1440px; /* Увеличен общий контейнер сайта для свободного размещения элементов */
         }
 
         html { scroll-behavior: smooth; }
@@ -106,6 +106,7 @@
             border-radius: 8px;
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
         .btn-red {
             background: var(--red);
@@ -124,10 +125,10 @@
         }
         .btn-dark:hover { background: #1a1a1a; border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
         
-        /* Увеличенная кнопка в хедере */
+        /* Кнопка в хедере */
         .btn-sm { 
-            padding: 14px 30px; 
-            font-size: 18px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
             border-radius: 10px;
         }
 
@@ -151,18 +152,20 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px; /* Немного уменьшили отступ, чтобы кнопка влезла */
+            gap: 16px; /* Уменьшили отступ между элементами, чтобы всё влезло */
             flex-wrap: nowrap;
         }
+        /* Возвращаем крупный логотип */
         .logo {
             display: flex;
             align-items: center;
-            gap: 9px;
-            font-size: 36px;
+            gap: 8px;
+            font-size: 36px; 
             font-weight: 500;
             letter-spacing: -0.01em;
             color: #fff;
             white-space: nowrap;
+            flex-shrink: 0;
         }
         .logo-square {
             width: 14px; height: 14px;
@@ -177,12 +180,15 @@
         .logo-text { display: inline-flex; gap: 4px; }
         .logo-text span { color: var(--text-2); font-weight: 400; }
 
+        /* Возвращаем крупные ссылки */
         .nav-links {
             display: flex;
-            gap: 4px; /* Увеличили расстояние между ссылками */
-            font-size: 16.5px;
+            gap: 2px;
+            font-size: 16.5px; 
             color: var(--text-2);
             flex-wrap: nowrap;
+            justify-content: center;
+            flex: 1;
         }
         .nav-links a {
             padding: 8px 14px;
@@ -960,14 +966,14 @@
         .contact-section {
             padding: 40px 0 100px;
         }
-        /* Увеличенный контейнер для телефона */
+        /* Значительно увеличенный контейнер для телефона */
         .contact-wrap {
-            max-width: 1100px; /* Увеличено с 900px */
+            max-width: 1300px; /* Увеличено до 1300px */
             margin: 0 auto;
             background: linear-gradient(180deg, #1a1014 0%, #12080b 100%);
             border: 1px solid rgba(255,220,225,0.12);
             border-radius: 20px;
-            padding: 90px 60px; /* Увеличено с 70px 50px */
+            padding: 100px 80px; /* Увеличены внутренние отступы */
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -986,7 +992,7 @@
             position: absolute;
             top: -150px; left: 50%;
             transform: translateX(-50%);
-            width: 700px; height: 700px;
+            width: 800px; height: 800px;
             background: radial-gradient(circle, rgba(224,26,44,0.25), transparent 65%);
             pointer-events: none;
             animation: glowPulse 4s ease-in-out infinite;
@@ -1019,7 +1025,7 @@
 
         .contact-phone {
             display: block;
-            font-size: clamp(46px, 8vw, 100px); /* Чуть скорректирован vw, чтобы точно влезал */
+            font-size: clamp(46px, 8.5vw, 110px); /* Увеличен размер под стать контейнеру */
             font-weight: 800;
             letter-spacing: -0.04em;
             line-height: 1;
@@ -1127,6 +1133,8 @@
             .features-4 { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-info { grid-template-columns: 1fr 1fr; }
+            
+            /* Для ноутбуков и планшетов */
             .nav-links { font-size: 14px; gap: 0; }
             .nav-links a { padding: 8px 8px; }
         }
@@ -1166,7 +1174,7 @@
                 padding: 50px 20px; 
                 border-radius: 16px;
             }
-            .contact-phone { font-size: clamp(30px, 11vw, 46px); }
+            .contact-phone { font-size: clamp(28px, 10vw, 42px); }
             
             .footer-info { grid-template-columns: 1fr; gap: 28px; }
             .risk-note, .risk-actions { text-align: left; }
