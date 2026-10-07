@@ -41,7 +41,7 @@
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-            font-size: 121%; /* FONT +21% от исходного (110% * 1.1) */
+            font-size: 121%;
         }
         a { color: inherit; text-decoration: none; }
         img { max-width: 100%; display: block; }
@@ -76,7 +76,7 @@
         }
         .sec-pill {
             display: inline-block;
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             font-weight: 500;
             color: #fff;
             background: #000;
@@ -96,7 +96,7 @@
             justify-content: center;
             gap: 8px;
             padding: 14px 28px;
-            font-size: 17px; /* FONT +10% */
+            font-size: 17px;
             font-weight: 500;
             border: none;
             cursor: pointer;
@@ -123,7 +123,13 @@
             border: 1px solid rgba(255,255,255,0.15);
         }
         .btn-dark:hover { background: #1a1a1a; border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
-        .btn-sm { padding: 11px 22px; font-size: 16.5px; /* FONT +10% */ }
+        
+        /* Увеличенная кнопка в хедере */
+        .btn-sm { 
+            padding: 14px 30px; 
+            font-size: 18px; 
+            border-radius: 10px;
+        }
 
         /* ============ HEADER ============ */
         header {
@@ -145,18 +151,18 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            flex-wrap: nowrap; /* Запрет переноса контейнера */
+            gap: 20px; /* Немного уменьшили отступ, чтобы кнопка влезла */
+            flex-wrap: nowrap;
         }
         .logo {
             display: flex;
             align-items: center;
             gap: 9px;
-            font-size: 36px; /* FONT +10% */
+            font-size: 36px;
             font-weight: 500;
             letter-spacing: -0.01em;
             color: #fff;
-            white-space: nowrap; /* Логотип в одну строку */
+            white-space: nowrap;
         }
         .logo-square {
             width: 14px; height: 14px;
@@ -173,17 +179,17 @@
 
         .nav-links {
             display: flex;
-            gap: 2px;
-            font-size: 16.5px; /* FONT +10% */
+            gap: 4px; /* Увеличили расстояние между ссылками */
+            font-size: 16.5px;
             color: var(--text-2);
-            flex-wrap: nowrap; /* Ссылки в одну строку */
+            flex-wrap: nowrap;
         }
         .nav-links a {
             padding: 8px 14px;
             border-radius: 6px;
             transition: all .2s;
             position: relative;
-            white-space: nowrap; /* Текст ссылок в одну строку */
+            white-space: nowrap;
         }
         .nav-links a::after {
             content: '';
@@ -205,7 +211,7 @@
             width: 40px; height: 40px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 22px; /* FONT +10% */
+            font-size: 22px;
         }
 
         /* ============ HERO ============ */
@@ -267,7 +273,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 30px; /* FONT +10% */
+            font-size: 30px;
             font-weight: 500;
             color: #fff;
             margin-bottom: 30px;
@@ -281,7 +287,7 @@
         }
 
         .hero-question {
-            font-size: clamp(16px, 1.25vw, 17.5px); /* FONT +10% */
+            font-size: clamp(16px, 1.25vw, 17.5px);
             font-weight: 500;
             color: #fff;
             margin-bottom: 22px;
@@ -306,7 +312,7 @@
         }
 
         .hero-desc {
-            font-size: clamp(16px, 1.25vw, 17.5px); /* FONT +10% */
+            font-size: clamp(16px, 1.25vw, 17.5px);
             color: var(--text);
             line-height: 1.65;
             max-width: 560px;
@@ -322,7 +328,7 @@
         }
 
         .hero-note {
-            font-size: 12.5px; /* FONT +10% */
+            font-size: 12.5px;
             font-weight: 500;
             color: var(--text-3);
             letter-spacing: 0.12em;
@@ -375,7 +381,7 @@
             border: 1px solid rgba(255,220,225,0.2);
             color: #fff;
             cursor: pointer;
-            font-size: 16.5px; /* FONT +10% */
+            font-size: 16.5px;
             display: grid;
             place-items: center;
             transition: background .2s, color .2s, border-color .2s, transform .2s;
@@ -392,7 +398,7 @@
         }
 
         .slider-caption {
-            font-size: 16.5px; /* FONT +10% */
+            font-size: 16.5px;
             color: #fff;
             font-weight: 400;
             text-align: center;
@@ -436,7 +442,7 @@
             align-items: center;
             gap: 8px;
             color: var(--text-3);
-            font-size: 12px; /* FONT +10% */
+            font-size: 12px;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             opacity: 0;
@@ -532,7 +538,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             font-weight: 600;
             color: #fff;
             letter-spacing: 0.05em;
@@ -560,7 +566,7 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            font-size: 16px; /* FONT +10% */
+            font-size: 16px;
             color: var(--text);
             line-height: 1.5;
         }
@@ -573,7 +579,7 @@
             display: grid;
             place-items: center;
             color: var(--green);
-            font-size: 12px; /* FONT +10% */
+            font-size: 12px;
             margin-top: 2px;
         }
         .step-item b { color: var(--text); font-weight: 600; }
@@ -588,13 +594,13 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            font-size: 14.5px; /* FONT +10% */
+            font-size: 14.5px;
             color: var(--text-2);
         }
         .flow-num {
             width: 30px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             color: var(--text-3);
         }
         .flow-bar {
@@ -645,7 +651,7 @@
             background: linear-gradient(90deg, #1a070c 0%, rgba(255,45,64,0.08) 50%, transparent 100%);
             border: 1px solid rgba(224,26,44,0.28);
             border-radius: 8px;
-            font-size: 17px; /* FONT +10% */
+            font-size: 17px;
             color: #fff;
             transition: all .25s;
             position: relative;
@@ -664,7 +670,7 @@
             display: grid;
             place-items: center;
             color: var(--red-2);
-            font-size: 20px; /* FONT +10% */
+            font-size: 20px;
         }
         .risk-item:hover {
             background: linear-gradient(90deg, #2a0810 0%, rgba(255,45,64,0.14) 60%, transparent 100%);
@@ -673,7 +679,7 @@
         }
         .risk-note {
             margin-top: 24px;
-            font-size: 14.5px; /* FONT +10% */
+            font-size: 14.5px;
             color: var(--text-3);
             text-align: right;
         }
@@ -713,7 +719,7 @@
             pointer-events: none;
         }
         .num-card .val {
-            font-size: clamp(58px, 7.3vw, 92px); /* FONT +10% */
+            font-size: clamp(58px, 7.3vw, 92px);
             font-weight: 700;
             letter-spacing: -0.045em;
             line-height: 1;
@@ -724,7 +730,7 @@
         }
         .num-card .val span { color: var(--red-2); }
         .num-card .cap {
-            font-size: 16px; /* FONT +10% */
+            font-size: 16px;
             color: var(--text-2);
             line-height: 1.5;
             margin-bottom: 24px;
@@ -739,7 +745,7 @@
             flex-wrap: wrap;
         }
         .num-chip {
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             color: var(--text-2);
             padding: 5px 10px;
             background: rgba(255,220,225,0.05);
@@ -793,7 +799,7 @@
         .price-card:hover .price-value { color: var(--red-2); }
 
         .price-card h3 {
-            font-size: 24px; /* FONT +10% */
+            font-size: 24px;
             font-weight: 700;
             color: #fff;
             margin-bottom: 14px;
@@ -801,14 +807,14 @@
             line-height: 1.25;
         }
         .price-desc {
-            font-size: 16px; /* FONT +10% */
+            font-size: 16px;
             color: var(--text-2);
             line-height: 1.6;
             margin-bottom: 26px;
             flex: 1;
         }
         .price-value {
-            font-size: 31.5px; /* FONT +10% */
+            font-size: 31.5px;
             font-weight: 800;
             color: #fff;
             letter-spacing: -0.03em;
@@ -874,12 +880,12 @@
             display: grid;
             place-items: center;
             color: var(--red-2);
-            font-size: 22px; /* FONT +10% */
+            font-size: 22px;
             margin-bottom: 20px;
             transition: all .3s;
         }
         .feat-card h3 {
-            font-size: 18px; /* FONT +10% */
+            font-size: 18px;
             font-weight: 600;
             color: #fff;
             margin-bottom: 10px;
@@ -887,7 +893,7 @@
             letter-spacing: -0.01em;
         }
         .feat-card p {
-            font-size: 15.5px; /* FONT +10% */
+            font-size: 15.5px;
             color: var(--text-3);
             line-height: 1.55;
         }
@@ -913,14 +919,14 @@
         .showcase > .container { position: relative; z-index: 1; }
 
         .showcase-title {
-            font-size: clamp(34px, 3.6vw, 50px); /* FONT +10% */
+            font-size: clamp(34px, 3.6vw, 50px);
             font-weight: 700;
             color: #fff;
             margin-bottom: 20px;
             letter-spacing: -0.025em;
         }
         .showcase-desc {
-            font-size: 17px; /* FONT +10% */
+            font-size: 17px;
             color: var(--text-2);
             line-height: 1.65;
             max-width: 620px;
@@ -942,7 +948,7 @@
             width: 40px; height: 40px;
         }
         .showcase-slider .caption {
-            font-size: 16.5px; /* FONT +10% */
+            font-size: 16.5px;
             color: #fff;
             text-align: center;
             opacity: 0.85;
@@ -954,13 +960,14 @@
         .contact-section {
             padding: 40px 0 100px;
         }
+        /* Увеличенный контейнер для телефона */
         .contact-wrap {
-            max-width: 900px;
+            max-width: 1100px; /* Увеличено с 900px */
             margin: 0 auto;
             background: linear-gradient(180deg, #1a1014 0%, #12080b 100%);
             border: 1px solid rgba(255,220,225,0.12);
-            border-radius: 16px;
-            padding: 70px 50px;
+            border-radius: 20px;
+            padding: 90px 60px; /* Увеличено с 70px 50px */
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -979,8 +986,8 @@
             position: absolute;
             top: -150px; left: 50%;
             transform: translateX(-50%);
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(224,26,44,0.22), transparent 65%);
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(224,26,44,0.25), transparent 65%);
             pointer-events: none;
             animation: glowPulse 4s ease-in-out infinite;
         }
@@ -993,14 +1000,14 @@
             position: absolute;
             top: -1px; left: 50%;
             transform: translateX(-50%);
-            width: 120px; height: 2px;
+            width: 150px; height: 3px;
             background: var(--red-2);
             box-shadow: 0 0 20px var(--red-2);
         }
 
         .contact-label {
             display: inline-block;
-            font-size: 14.5px; /* FONT +10% */
+            font-size: 14.5px;
             font-weight: 500;
             color: var(--text-3);
             letter-spacing: 0.16em;
@@ -1012,7 +1019,7 @@
 
         .contact-phone {
             display: block;
-            font-size: clamp(46px, 8.5vw, 106px); /* FONT +10% */
+            font-size: clamp(46px, 8vw, 100px); /* Чуть скорректирован vw, чтобы точно влезал */
             font-weight: 800;
             letter-spacing: -0.04em;
             line-height: 1;
@@ -1024,7 +1031,7 @@
             text-shadow:
                     0 0 30px rgba(255,150,175,0.45),
                     0 0 90px rgba(224,26,44,0.35);
-            white-space: nowrap; /* Телефон в одну строку */
+            white-space: nowrap;
             word-break: keep-all;
         }
         .contact-phone:hover {
@@ -1036,7 +1043,7 @@
         }
 
         .contact-hint {
-            font-size: 18px; /* FONT +10% */
+            font-size: 18px;
             color: var(--text-2);
             position: relative;
             z-index: 1;
@@ -1062,7 +1069,7 @@
             flex-shrink: 0;
         }
         .footer-logo-text {
-            font-size: clamp(38px, 6.6vw, 82px); /* FONT +10% */
+            font-size: clamp(38px, 6.6vw, 82px);
             font-weight: 500;
             letter-spacing: -0.045em;
             line-height: 1;
@@ -1078,12 +1085,12 @@
             border-top: 1px solid var(--line);
         }
         .footer-desc {
-            font-size: 14px; /* FONT +10% */
+            font-size: 14px;
             color: var(--text-3);
             line-height: 1.6;
         }
         .footer-col h4 {
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             color: var(--text-4);
             text-transform: uppercase;
             letter-spacing: 0.12em;
@@ -1092,7 +1099,7 @@
         }
         .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
         .footer-col a {
-            font-size: 15.5px; /* FONT +10% */
+            font-size: 15.5px;
             color: var(--text-2);
             transition: color .2s, transform .2s;
             display: inline-block;
@@ -1108,7 +1115,7 @@
             margin-top: 40px;
             padding-top: 24px;
             border-top: 1px solid var(--line);
-            font-size: 13px; /* FONT +10% */
+            font-size: 13px;
             color: var(--text-4);
         }
 
@@ -1120,6 +1127,8 @@
             .features-4 { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-info { grid-template-columns: 1fr 1fr; }
+            .nav-links { font-size: 14px; gap: 0; }
+            .nav-links a { padding: 8px 8px; }
         }
 
         @media (max-width: 720px) {
@@ -1141,8 +1150,8 @@
             .hero { padding: 100px 0 190px; min-height: auto; }
             .hero-slider { bottom: 30px; gap: 10px; }
             .slider-nav { padding: 0 48px; min-height: 36px; }
-            .slider-arrow { width: 32px; height: 32px; font-size: 15px; /* FONT +10% */ }
-            .slider-caption { font-size: 14.5px; /* FONT +10% */ }
+            .slider-arrow { width: 32px; height: 32px; font-size: 15px; }
+            .slider-caption { font-size: 14.5px; }
             .scroll-hint { display: none; }
 
             section { padding: 64px 0; }
@@ -1151,12 +1160,16 @@
             .num-card { padding: 32px 24px; }
             .pricing-grid { grid-template-columns: 1fr; }
             .price-card { padding: 26px 22px; }
-            .contact-wrap { padding: 50px 24px; }
+            
+            /* Адаптив для контейнера телефона */
+            .contact-wrap { 
+                padding: 50px 20px; 
+                border-radius: 16px;
+            }
+            .contact-phone { font-size: clamp(30px, 11vw, 46px); }
+            
             .footer-info { grid-template-columns: 1fr; gap: 28px; }
             .risk-note, .risk-actions { text-align: left; }
-            
-            /* Корректировка телефона для мобильных */
-            .contact-phone { font-size: clamp(32px, 11vw, 46px); }
         }
 
         @media (prefers-reduced-motion: reduce) {
