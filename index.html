@@ -50,7 +50,6 @@
 
         .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
 
-        /* ============ SCROLL PROGRESS BAR ============ */
         .scroll-progress {
             position: fixed;
             top: 0; left: 0;
@@ -62,13 +61,11 @@
             transition: width .1s linear;
         }
 
-        /* ============ TYPO ============ */
         .h1 { font-size: clamp(38px, 5vw, 65px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
         .h2 { font-size: clamp(32px, 3.6vw, 48px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; }
         .h3 { font-size: clamp(21px, 1.6vw, 24px); font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; }
         .lead { font-size: clamp(18.15px, 1.54vw, 20.35px); color: var(--text-2); line-height: 1.6; }
 
-        /* ============ SECTION HEADER ============ */
         .sec-head {
             text-align: center;
             max-width: 720px;
@@ -89,7 +86,6 @@
         .sec-head .h2 { margin-bottom: 16px; }
         .sec-head .lead { max-width: 620px; margin: 0 auto; }
 
-        /* ============ BUTTONS ============ */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -131,7 +127,6 @@
             border-radius: 10px;
         }
 
-        /* ============ HEADER ============ */
         header {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -217,7 +212,6 @@
             font-size: 22px;
         }
 
-        /* ============ HERO ============ */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -344,7 +338,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ============ HERO SLIDER ============ */
         .hero-slider {
             position: absolute;
             bottom: 40px;
@@ -462,10 +455,8 @@
             100% { transform: scaleY(0); transform-origin: bottom; }
         }
 
-        /* ============ SECTIONS ============ */
         section { padding: 100px 0; position: relative; }
 
-        /* ============ REVEAL ANIMATIONS ============ */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -513,7 +504,6 @@
         .stagger.visible > *:nth-child(8) { transition-delay: .75s; }
         .stagger.visible > *:nth-child(9) { transition-delay: .85s; }
 
-        /* ============ 3-COLUMN STEPS ============ */
         .steps-3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -624,7 +614,6 @@
         }
         .flow-row.animated .flow-bar::after { width: var(--p, 30%); }
 
-        /* ============ RISK SECTION ============ */
         .risk-section {
             background: #0d0709;
             border-top: 1px solid var(--line);
@@ -687,7 +676,6 @@
         .risk-note a { color: #fff; text-decoration: underline; }
         .risk-actions { margin-top: 20px; text-align: right; }
 
-        /* ============ BIG NUMBERS ============ */
         .numbers-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -760,7 +748,70 @@
             color: #fff;
         }
 
-        /* ============ PRICING ============ */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+        .work-card {
+            background: linear-gradient(180deg, #1a1014 0%, #130a0d 100%);
+            border: 1px solid rgba(255,220,225,0.1);
+            border-radius: 12px;
+            padding: 30px 26px 28px;
+            transition: all .35s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            cursor: pointer;
+        }
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--red-2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .work-card:hover {
+            border-color: rgba(224,26,44,0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -20px rgba(224,26,44,0.4);
+        }
+        .work-card:hover::before { opacity: 1; }
+        .work-icon {
+            font-size: 34px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .work-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .work-card p {
+            font-size: 15.95px;
+            color: var(--text-2);
+            line-height: 1.55;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+        .work-link {
+            font-size: 15.4px;
+            font-weight: 500;
+            color: var(--red-2);
+            transition: all .2s;
+            display: inline-block;
+        }
+        .work-card:hover .work-link {
+            transform: translateX(5px);
+        }
+
         .pricing-section {
             background: #0d0709;
             border-top: 1px solid var(--line);
@@ -838,7 +889,6 @@
         .price-card.visible .price-value::before { width: 40px; }
         .price-value span { color: var(--red-2); }
 
-        /* ============ PRICING PHONE (НОВЫЙ БЛОК) ============ */
         .pricing-phone {
             text-align: center;
             margin-top: 80px;
@@ -884,7 +934,6 @@
             transform: scale(1.03);
         }
 
-        /* ============ 4 FEATURE CARDS ============ */
         .features-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -945,7 +994,6 @@
             line-height: 1.55;
         }
 
-        /* ============ SHOWCASE SECTION ============ */
         .showcase {
             padding: 100px 0;
             text-align: center;
@@ -1003,7 +1051,6 @@
             min-width: 0;
         }
 
-        /* ============ CONTACT / PHONE BLOCK ============ */
         .contact-section {
             padding: 40px 0 100px;
         }
@@ -1096,7 +1143,6 @@
             line-height: 1.6;
         }
 
-        /* ============ FOOTER ============ */
         footer {
             padding: 60px 0 40px;
             border-top: 1px solid var(--line);
@@ -1165,12 +1211,12 @@
             color: var(--text-4);
         }
 
-        /* ============ RESPONSIVE ============ */
         @media (max-width: 1024px) {
             .steps-3 { grid-template-columns: 1fr; }
             .risk-grid { grid-template-columns: 1fr; gap: 40px; }
             .numbers-2 { grid-template-columns: 1fr; }
             .features-4 { grid-template-columns: repeat(2, 1fr); }
+            .works-grid { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-info { grid-template-columns: 1fr 1fr; }
             
@@ -1203,6 +1249,7 @@
 
             section { padding: 64px 0; }
             .features-4 { grid-template-columns: 1fr; }
+            .works-grid { grid-template-columns: 1fr; }
             .numbers-2 { gap: 16px; }
             .num-card { padding: 32px 24px; }
             .pricing-grid { grid-template-columns: 1fr; }
@@ -1233,10 +1280,8 @@
 </head>
 <body>
 
-<!-- ============ SCROLL PROGRESS ============ -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- ============ HEADER ============ -->
 <header id="header">
     <div class="container nav">
         <a href="#" class="logo">
@@ -1256,7 +1301,6 @@
     </div>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
     <div class="hero-glow" id="heroGlow"></div>
 
@@ -1291,7 +1335,6 @@
     </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
 <section id="how" style="padding-top: 80px;">
     <div class="container">
         <div class="sec-head reveal">
@@ -1381,7 +1424,6 @@
     </div>
 </section>
 
-<!-- ============ RISKS ============ -->
 <section class="risk-section" id="risks">
     <div class="container">
         <div class="risk-grid">
@@ -1420,7 +1462,6 @@
     </div>
 </section>
 
-<!-- ============ WHY LEADERS ============ -->
 <section id="why">
     <div class="container">
         <div class="sec-head reveal">
@@ -1448,10 +1489,42 @@
                 </div>
             </div>
         </div>
+
+        <!-- ============ ПРИМЕРЫ РАБОТ ============ -->
+        <div class="sec-head reveal" style="margin-top: 100px;">
+            <span class="sec-pill">Примеры работ</span>
+            <h2 class="h2">Что мы делаем</h2>
+        </div>
+
+        <div class="works-grid stagger">
+            <a href="https://volgachoir.ru/" target="_blank" rel="noopener" class="work-card">
+                <div class="work-icon">🏛️</div>
+                <h3>Сайт гос учреждения</h3>
+                <p>Сайты для государственных и муниципальных организаций с соблюдением всех требований законодательства.</p>
+                <span class="work-link">Смотреть сайт →</span>
+            </a>
+            <a href="https://expressiveband.ru/" target="_blank" rel="noopener" class="work-card">
+                <div class="work-icon">💼</div>
+                <h3>Сайт-визитка</h3>
+                <p>Лаконичный сайт с основной информацией о компании, услугах и контактах.</p>
+                <span class="work-link">Смотреть сайт →</span>
+            </a>
+            <a href="https://kevers90.github.io/cookies/" target="_blank" rel="noopener" class="work-card">
+                <div class="work-icon">🛒</div>
+                <h3>Сайт с каталогом товаров</h3>
+                <p>Удобная демонстрация продукции с фильтрами, категориями и возможностью заказа.</p>
+                <span class="work-link">Смотреть сайт →</span>
+            </a>
+            <a href="https://kevers90.github.io/Samarafolkfest/" target="_blank" rel="noopener" class="work-card">
+                <div class="work-icon">🚀</div>
+                <h3>Лендинг</h3>
+                <p>Одностраничный сайт для максимальной конверсии посетителей в заявки и продажи.</p>
+                <span class="work-link">Смотреть сайт →</span>
+            </a>
+        </div>
     </div>
 </section>
 
-<!-- ============ PRICING ============ -->
 <section class="pricing-section" id="pricing">
     <div class="container">
         <div class="sec-head reveal">
@@ -1516,14 +1589,13 @@
             </div>
         </div>
 
-        <!-- ============ PHONE AT END OF PRICING ============ -->
         <div class="pricing-phone reveal">
+            <span class="pricing-phone-label">Не нашли подходящий тариф? Позвоните — подберём решение под вашу задачу</span>
             <a href="tel:+79033092082" class="pricing-phone-number">+7 903 309-20-82</a>
         </div>
     </div>
 </section>
 
-<!-- ============ PRIORITIES ============ -->
 <section id="first" style="background: #0d0709; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div class="container">
         <div class="sec-head reveal">
@@ -1556,7 +1628,6 @@
     </div>
 </section>
 
-<!-- ============ SHOWCASE ============ -->
 <section class="showcase">
     <div class="container">
         <div class="reveal reveal-blur">
@@ -1579,7 +1650,6 @@
     </div>
 </section>
 
-<!-- ============ CONTACT / PHONE ============ -->
 <section class="contact-section" id="contact">
     <div class="container">
         <div class="contact-wrap reveal reveal-scale">
@@ -1592,7 +1662,6 @@
     </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer>
     <div class="container">
         <div class="footer-logo reveal">
@@ -1640,7 +1709,6 @@
 </footer>
 
 <script>
-    /* ============ SCROLL PROGRESS ============ */
     const scrollProgress = document.getElementById('scrollProgress');
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY;
@@ -1649,11 +1717,9 @@
         scrollProgress.style.width = progress + '%';
     }, { passive: true });
 
-    /* ============ HEADER ============ */
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
 
-    /* ============ HERO PARALLAX ============ */
     const heroGlow = document.getElementById('heroGlow');
     if (heroGlow) {
         window.addEventListener('scroll', () => {
@@ -1664,13 +1730,11 @@
         }, { passive: true });
     }
 
-    /* ============ NAV TOGGLE ============ */
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    /* ============ REVEAL + STAGGER ============ */
     const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(e => {
             if (e.isIntersecting) {
@@ -1697,7 +1761,6 @@
     }, { threshold: 0.3 });
     document.querySelectorAll('.price-card').forEach(el => priceCardObserver.observe(el));
 
-    /* ============ COUNTER ANIMATION ============ */
     const animateCount = (el) => {
         const target = +el.dataset.count;
         const suffix = el.dataset.suffix || '';
@@ -1724,7 +1787,6 @@
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
 
-    /* ============ HERO SLIDER ============ */
     const slides = [
         'Работаем по договору с фиксацией сроков и стоимости',
         'Оплата за результат после сдачи проекта',
@@ -1755,7 +1817,6 @@
     document.getElementById('nextSlide').addEventListener('click', () => goToSlide(currentSlide + 1));
     setInterval(() => goToSlide(currentSlide + 1), 6000);
 
-    /* ============ SHOWCASE SLIDER ============ */
     const showcaseSlides = [
         '«Сделали лендинг за 4 дня, конверсия выросла на 34%» — FinBoard',
         '«Переписали дашборд на React, интерфейс стал в 3 раза быстрее» — StyleHome',
