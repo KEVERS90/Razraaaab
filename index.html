@@ -127,13 +127,15 @@
             border-radius: 10px;
         }
 
+        /* ============ HEADER — СКРЫТИЕ ПРИ ПРОКРУТКЕ ВНИЗ ============ */
         header {
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 100;
             padding: 18px 0;
-            transition: all .3s;
+            transition: transform .4s cubic-bezier(.2,.7,.3,1), padding .3s, background .3s;
             border-bottom: 1px solid transparent;
+            will-change: transform;
         }
         header.scrolled {
             padding: 12px 0;
@@ -142,6 +144,11 @@
             -webkit-backdrop-filter: blur(18px);
             border-bottom-color: var(--line);
         }
+        /* Скрываем хедер при прокрутке вниз */
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
         .nav {
             display: flex;
             align-items: center;
@@ -1717,8 +1724,34 @@
         scrollProgress.style.width = progress + '%';
     }, { passive: true });
 
+    /* ============ HEADER — СКРЫТИЕ ПРИ ПРОКРУТКЕ ВНИЗ ============ */
     const header = document.getElementById('header');
-    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function updateHeader() {
+        const scrollTop = window.scrollY;
+
+        // Добавляем класс "scrolled" для фона при прокрутке
+        header.classList.toggle('scrolled', scrollTop > 20);
+
+        // Скрываем при прокрутке вниз, показываем при прокрутке вверх
+        if (scrollTop > lastScrollTop && scrollTop > 200) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
 
     const heroGlow = document.getElementById('heroGlow');
     if (heroGlow) {
